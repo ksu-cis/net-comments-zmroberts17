@@ -47,5 +47,40 @@ namespace VectorMath
             this.Y = y;
             this.Z = z;
         }
+
+        /// <summary>
+        /// Constructs a new instance of Vector3 with
+        /// the supplied values for X, Y, and Z.
+        /// <param name="X">A double precision number for the x component of the vector.</param>
+        /// <param name="Y">A double precision number for the y component of the vector.</param>
+        /// <param name="Z">A double precision number for the z component of the vector.</param>
+        /// </summary>
+        public Vector3(double x, double y, double z)
+        {
+            this.X = x;
+            this.Y = y;
+            this.Z = z;
+        }
+
+        /// <summary>
+        /// Adds the other vector into this vector
+        /// </summary>
+        /// <param name="other">The vector to add into this one</param>
+        public void Add(Vector3 other)
+        {
+            this.X += other.X;
+            this.Y += other.Y;
+            this.Z += other.Z;
+        }
+
+        /// <summary>
+        /// Computes the dot product of this vector and another vector
+        /// </summary>
+        /// <param name="other">The other vector</param>
+        /// <returns>The dot product as a double precision float</returns>
+        public double DotProduct(Vector3 other)
+        {
+            return this.X * other.X + this.Y * other.Y + this.Z * other.Z;
+        }
     }
 }
